@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <!--
+    Three.js Liquid Water — Pooling & Flow
+    Made by Kantasu
+
+    A terrain-aware shallow-water simulation addon for three.js.
+    Water on elevated plateaus cascades downhill and pools in lower basins.
+  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="author" content="Kantasu" />
+    <title>Three.js Liquid Water — Pooling & Flow (by Kantasu)</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #05070d;
+        color: #e8edf4;
+      }
+      #app {
+        position: fixed;
+        inset: 0;
+      }
+      canvas {
+        display: block;
+        touch-action: none;
+      }
+      .hint {
+        position: fixed;
+        left: 12px;
+        bottom: 12px;
+        z-index: 10;
+        font-size: 12px;
+        color: #aab3c0;
+        background: rgba(10, 14, 22, 0.65);
+        padding: 8px 12px;
+        border-radius: 8px;
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        line-height: 1.5;
+        max-width: 360px;
+      }
+      .hint b { color: #6cb6ff; }
+      .hint kbd {
+        display: inline-block;
+        padding: 1px 6px;
+        background: #1b2230;
+        border: 1px solid #2c3547;
+        border-radius: 4px;
+        font-size: 11px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+      .credit {
+        position: fixed;
+        right: 12px;
+        bottom: 12px;
+        z-index: 10;
+        font-size: 11px;
+        color: #6b7585;
+        background: rgba(10, 14, 22, 0.5);
+        padding: 4px 8px;
+        border-radius: 6px;
+        border: 1px solid rgba(255, 255, 255, 0.04);
+      }
+      .lil-g {
+        z-index: 10 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div class="hint">
+      <b>Left-drag</b> add water source &nbsp; <b>Right-drag</b> orbit &nbsp; <b>Wheel</b> zoom<br/>
+      <kbd>1</kbd> water &nbsp; <kbd>2</kbd> raise terrain &nbsp; <kbd>3</kbd> lower terrain &nbsp; <kbd>4</kbd> drain
+    </div>
+    <div class="credit">Made by Kantasu</div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
